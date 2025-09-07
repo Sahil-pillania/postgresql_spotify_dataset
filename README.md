@@ -1,8 +1,9 @@
 # Spotify Advanced SQL Project and Query Optimization P-6
 Project Category: Advanced
+
 [Click Here to get Dataset](https://www.kaggle.com/datasets/sanjanchaudhari/spotify-dataset)
 
-![Spotify Logo]
+![Spotify Logo](spotify_logo.jpg)
 
 ## Overview
 This project involves analyzing a Spotify dataset with various attributes about tracks, albums, and artists using **SQL**. It covers an end-to-end process of normalizing a denormalized dataset, performing SQL queries of varying complexity (easy, medium, and advanced), and optimizing query performance. The primary goals of the project are to practice advanced SQL skills and generate valuable insights from the dataset.
@@ -121,7 +122,7 @@ To improve query performance, we carried out the following optimization process:
         - Execution time (E.T.): **7 ms**
         - Planning time (P.T.): **0.17 ms**
     - Below is the **screenshot** of the `EXPLAIN` result before optimization:
-      ![EXPLAIN Before Index] --
+      ![EXPLAIN Before Index](spotify_explain_before_index.png)
 
 - **Index Creation on the `artist` Column**
     - To optimize the query performance, we created an index on the `artist` column. This ensures faster retrieval of rows where the artist is queried.
@@ -135,12 +136,14 @@ To improve query performance, we carried out the following optimization process:
         - Execution time (E.T.): **0.153 ms**
         - Planning time (P.T.): **0.152 ms**
     - Below is the **screenshot** of the `EXPLAIN` result after index creation:
-      [EXPLAIN After Index] --
+      ![EXPLAIN After Index](spotify_explain_after_index.png)
 
 - **Graphical Performance Comparison**
     - A graph illustrating the comparison between the initial query execution time and the optimized query execution time after index creation.
     - **Graph view** shows the significant drop in both execution and planning times:
-      
+      ![spotify graphical view ](spotify_graphical_view_1.png)
+      ![spotify graphical view ](spotify_graphical_view_2.png)
+	  ![spotify graphical view ](spotify_graphical_view_3.png)
 
 This optimization shows how indexing can drastically reduce query time, improving the overall performance of our database operations in the Spotify project.
 ---
